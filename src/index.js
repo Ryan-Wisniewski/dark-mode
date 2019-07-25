@@ -5,11 +5,13 @@ import axios from "axios";
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
+import useLoacalStorage from './hooks/useLocalStorage'
+
 import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-
+  // const [name, setName] = useLoacalStorage('key', 'intialValue')
   useEffect(() => {
     axios
       .get(
